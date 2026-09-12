@@ -20,3 +20,6 @@
 
 - Input manager is being used for the lecture NOT input system
 
+#### Image
+
+<img width="552" height="692" alt="MG2drawio" src="https://github.com/user-attachments/assets/b876972c-8695-478c-91ec-e0b6a6a20c54" />
