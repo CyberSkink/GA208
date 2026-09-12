@@ -11,6 +11,8 @@ public class PlayerControlScript : MonoBehaviour
     private PlayerInput playerInput;
     //Establishes the player input component in the input manager
 
+    public
+
     private InputAction moveAction;
     //Establishes an action that the player can take
     void Awake()

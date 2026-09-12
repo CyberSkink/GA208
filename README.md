@@ -16,3 +16,7 @@
 
 ### W2
 
+#### Learned Notes
+
+- Input manager is being used for the lecture NOT input system
+
