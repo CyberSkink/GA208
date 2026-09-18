@@ -23,3 +23,14 @@
 #### Image
 
 <img width="552" height="692" alt="MG2drawio" src="https://github.com/user-attachments/assets/b876972c-8695-478c-91ec-e0b6a6a20c54" />
+
+### W3
+
+1. This Script : Inherited From Script e.g. (Goblin : Enemy)
+2. Orginization is KING!
+3. static means it will not need a new variable
+4. Inheritance = CHILD classes INHERIT things from a PARENT CLASS
+5. Inheritance Benefits: Performance, Editability, Orginization
+6. Finite state machines are essetnially rules that dictate actions and "Finite means limited, not ending"  
+7. I am good at state machines, lol.
+8. State machines and inheritance can be used in tandom for different classes that need the same (or similar) state machines.
