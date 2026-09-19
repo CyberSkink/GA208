@@ -34,3 +34,5 @@
 6. Finite state machines are essetnially rules that dictate actions and "Finite means limited, not ending"  
 7. I am good at state machines, lol.
 8. State machines and inheritance can be used in tandom for different classes that need the same (or similar) state machines.
+
+<img width="632" height="702" alt="SEEGAUL drawio" src="https://github.com/user-attachments/assets/e98b6a73-f634-42d2-a5ac-fba4aa935db7" />
