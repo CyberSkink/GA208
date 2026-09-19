@@ -7,7 +7,7 @@ public enum MovementState {
 public class Pigeon : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-
+    [SerializeField] public bool _flap;
     // (1) add a member variable to represent the Pigeon's state
     
 
@@ -22,7 +22,14 @@ public class Pigeon : MonoBehaviour
     // - otherwise, it should be Idle
     private void UpdateState ()
     {
-        
+        if(Input.GetKey("a"))
+        {
+            _flap = true;
+        }
+        else
+        {
+            _flap = false;
+        }
     }
 
     // (3) fill in this method to update the pigeon's animation based on its state
@@ -31,7 +38,14 @@ public class Pigeon : MonoBehaviour
     // use a Switch statement!
     private void UpdateAppearance()
     {
-        
+        if(_flap)
+        {
+            PlayFlyAnimation();
+        }
+        else
+        {
+            PlayIdleAnimation();
+        }
     }
 
     private void PlayFlyAnimation () {
