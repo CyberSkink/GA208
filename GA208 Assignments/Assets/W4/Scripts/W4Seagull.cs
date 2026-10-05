@@ -3,6 +3,7 @@ using System.Collections;
 
 public class W4Seagull : MonoBehaviour
 {
+    
     [SerializeField] AudioSource _audio;
     [SerializeField] Animator _animator;
     [SerializeField] float _minWaitSeconds = 0.0f;
@@ -12,7 +13,10 @@ public class W4Seagull : MonoBehaviour
     // use the Locator to find the Pigeon
     // then, subscribe the HandlePigeonCoo method to the Pigeon coo event
 
-
+    void Awake()
+    {
+        Locator.Instance._w4Pigeon.PigeonCooEvent += HandlePigeonCoo;
+    }
 
 
     // don't change the code in this method!

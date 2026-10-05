@@ -12,9 +12,6 @@ public class W4UI : MonoBehaviour
 
 
 
-
-
-
     // don't change the code in this method!
     public void HandlePigeonCoo ()
     {
