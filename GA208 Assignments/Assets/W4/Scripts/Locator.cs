@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class Locator : MonoBehaviour
 {
+//this is what you go to to locate things, it's basically the "trunk" of the object tree
+
 public static Locator Instance { get; private set; }
-public W4Pigeon _w4Pigeon { get; private set; }
-public W4Seagull[] _w4Seagull { get; private set; }
+public delegate void PigeonCooDelegate();
+public event PigeonCooDelegate PigeonCooEvent;
+
     private void Awake() 
     {
         if (Instance != null && Instance != this)
@@ -14,9 +17,11 @@ public W4Seagull[] _w4Seagull { get; private set; }
         }
     
         Instance = this;
-        GameObject pigeonObj = GameObject.FindWithTag("pigeon");
-        _w4Pigeon = pigeonObj.GetComponent<W4Pigeon>();
-        _w4Seagull = FindObjectsByType<W4Seagull>();
     }
    
+        public void CallCoo()
+    {
+            PigeonCooEvent?.Invoke();
+    }
+
 }

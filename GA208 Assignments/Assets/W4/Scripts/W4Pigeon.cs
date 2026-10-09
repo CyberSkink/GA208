@@ -2,24 +2,21 @@ using UnityEngine;
 
 public class W4Pigeon : MonoBehaviour
 {
+
+    //This is a "branch" of the object tree. Use the Locator as the "trunk".
     [SerializeField] private AudioSource _audio;
     [SerializeField] private Animator _animator;
 
     // REMOVE these references to other objects!
     // we're going to alert them via EVENT instead!!
-   //[SerializeField] private W4Seagull[] _seagulls; 
-    [SerializeField] private W4UI _ui;
-   [SerializeField] private W4VFX _vfx;
-    
-    
-   public delegate void PigeonCooDelegate();
-   public event PigeonCooDelegate PigeonCooEvent;
+
+
     
 
     // HERE, add an event to tell other objects that the pigeon coo'd!
     void Awake()
     {
-       PigeonCooEvent += Locator.Instance._w4Pigeon.Coo;
+
     }
 
     void TestMethod()
@@ -31,7 +28,7 @@ public class W4Pigeon : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            PigeonCooEvent?.Invoke();
+            Locator.Instance.CallCoo();
         }
     }
 
@@ -47,17 +44,6 @@ public class W4Pigeon : MonoBehaviour
         // instead, fire your coo event!
         
         // tell seagulls
-     foreach(W4Seagull _w4Seagull in Locator.Instance._w4Seagull)
-   {
-    PigeonCooEvent?.Invoke();
-   }
 
-
-
-        // tell UI
-        _ui.HandlePigeonCoo();
-
-        // tell VFX
-        _vfx.HandlePigeonCoo();
     }
 }

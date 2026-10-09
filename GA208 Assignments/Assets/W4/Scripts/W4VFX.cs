@@ -3,6 +3,7 @@ using System.Collections;
 
 public class W4VFX : MonoBehaviour
 {
+        //This is a "branch" of the object tree. Use the Locator as the "trunk".
     [SerializeField] private GameObject _pigeonSpotlight;
     [SerializeField] private float _duration;
 
@@ -13,7 +14,10 @@ public class W4VFX : MonoBehaviour
 
 
 
-
+  void Start()
+    {
+        Locator.Instance.PigeonCooEvent += HandlePigeonCoo;
+    }
     // don't change the code in this method!
     public void HandlePigeonCoo ()
     {

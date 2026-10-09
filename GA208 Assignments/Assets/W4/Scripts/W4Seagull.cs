@@ -3,7 +3,7 @@ using System.Collections;
 
 public class W4Seagull : MonoBehaviour
 {
-    
+        //This is a "branch" of the object tree. Use the Locator as the "trunk".
     [SerializeField] AudioSource _audio;
     [SerializeField] Animator _animator;
     [SerializeField] float _minWaitSeconds = 0.0f;
@@ -13,11 +13,15 @@ public class W4Seagull : MonoBehaviour
     // use the Locator to find the Pigeon
     // then, subscribe the HandlePigeonCoo method to the Pigeon coo event
 
-    void Awake()
+   public void CallCoo()
     {
-        Locator.Instance._w4Pigeon.PigeonCooEvent += HandlePigeonCoo;
+            Locator.Instance.CallCoo();
     }
 
+    void Start()
+    {
+        Locator.Instance.PigeonCooEvent += HandlePigeonCoo;
+    }
 
     // don't change the code in this method!
     public void HandlePigeonCoo ()
