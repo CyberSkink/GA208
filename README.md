@@ -41,3 +41,18 @@
 
 1. My stuff got deleted because why the fuck not...
 2. The TLDR is basically loose connections = more modularity = good
+
+### MG3
+
+Devlog for MG3
+
+What’s the parent NPC class? Which classes are child NPC classes?
+What does the NPC’s state change affect?
+How do the NPC child classes interpret the states differently?
+What’s the point of structuring the NPC code as a finite state machine with 2 unique subclasses?
+
+The parent class in this case would be the angry seagull, which the child class is the normal seagull. I wish I made a third, overarching class, but I didn’t think that far ahead :P
+The NPC change affects the sprite of the NPC and plays a noise. Hopefully it won’t affect your eardrums…
+The angry seagull, the parent, defines the reaction, where as the child class modifies it to be more tame
+Having one state machine for 2 different classes makes it easy to draw from similar actions.
+
