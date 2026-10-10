@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Muskrat : MonoBehaviour
@@ -8,6 +9,7 @@ public class Muskrat : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotationSpeed;
     [SerializeField] private float _jumpForce = 5.0f;
+
 
     private bool _orbitMode;
     private Transform _sphereTransform;
@@ -76,17 +78,17 @@ public class Muskrat : MonoBehaviour
 
         // STEP 1 -------------------------------------------------------------
 
-
+        transform.Rotate(0.0f, _rotationSpeed * leftright * Time.deltaTime, 0.0f, Space.Self);
         // STEP 2 -------------------------------------------------------------
         float movement = Input.GetAxis("Vertical");
 
         // This line of code is incorrect. 
         // Replace it with a different line of code that uses 'movement' to
         //      move the Muskrat forwards and backwards.
-        transform.position += movement * Vector3.forward * _moveSpeed * Time.deltaTime;
-
+        transform.Translate(Vector3.forward * movement * _moveSpeed * Time.deltaTime, Space.Self);
+        
         // STEP 2 -------------------------------------------------------------
-
+        Debug.Log(_rigidbody.linearVelocity.magnitude);
 
         // STEP 3 -------------------------------------------------------------
         // Change the "flying" and "running" parameters on the Animator based
@@ -97,7 +99,9 @@ public class Muskrat : MonoBehaviour
 
         
         // STEP 3 -------------------------------------------------------------
+    _animator.SetBool("running" , _rigidbody.linearVelocity.magnitude >= 0);
     }
+
 
     // ------------------------------------------------------------------------
     private void Jump()
