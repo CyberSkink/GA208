@@ -56,3 +56,10 @@ The NPC change affects the sprite of the NPC and plays a noise. Hopefully it won
 The angry seagull, the parent, defines the reaction, where as the child class modifies it to be more tame
 Having one state machine for 2 different classes makes it easy to draw from similar actions.
 
+## W6
+
+abstract classes can inherit from monobehavior
+
+Model view controller: Model <=> View <=> Controller
+
+
