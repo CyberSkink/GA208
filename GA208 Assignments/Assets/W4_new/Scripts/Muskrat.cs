@@ -9,6 +9,7 @@ public class Muskrat : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotationSpeed;
     [SerializeField] private float _jumpForce = 5.0f;
+    [SerializeField] private Vector3 _direction;
 
 
     private bool _orbitMode;
@@ -57,6 +58,8 @@ public class Muskrat : MonoBehaviour
 
 
         // STEP 4 -------------------------------------------------------------
+        _animator.SetBool("running" , Mathf.Abs(forward) > 0 || Mathf.Abs(leftright) > 0);
+        _animator.SetBool("flying" , Mathf.Abs(_rigidbody.linearVelocity.y) > 0.001 );
     }
 
     // ------------------------------------------------------------------------
@@ -85,10 +88,11 @@ public class Muskrat : MonoBehaviour
         // This line of code is incorrect. 
         // Replace it with a different line of code that uses 'movement' to
         //      move the Muskrat forwards and backwards.
+   
         transform.Translate(Vector3.forward * movement * _moveSpeed * Time.deltaTime, Space.Self);
-        
         // STEP 2 -------------------------------------------------------------
-        Debug.Log(_rigidbody.linearVelocity.magnitude);
+
+              
 
         // STEP 3 -------------------------------------------------------------
         // Change the "flying" and "running" parameters on the Animator based
@@ -99,7 +103,8 @@ public class Muskrat : MonoBehaviour
 
         
         // STEP 3 -------------------------------------------------------------
-    _animator.SetBool("running" , _rigidbody.linearVelocity.magnitude >= 0);
+    _animator.SetBool("running" , Mathf.Abs(_rigidbody.linearVelocity.z) > 0 || Mathf.Abs(_rigidbody.linearVelocity.x) > 0);
+    _animator.SetBool("flying" , Mathf.Abs(_rigidbody.linearVelocity.y) > 0.001 );
     }
 
 

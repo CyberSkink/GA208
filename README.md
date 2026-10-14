@@ -62,4 +62,14 @@ abstract classes can inherit from monobehavior
 
 Model view controller: Model <=> View <=> Controller
 
+unity follows mvc pattern
+
+Stardew Valley:
+
+Damien and I see that the gameplay for the scriptable objects are on a grid, represented by the different ditritus around the farm, state machines control the animation because they are all unique and they coorespond to the broken objects, using an enum would probably be good for this.
+
+Hatsune Miku:
+
+The beat types are scriptable objects with data that can be interchanged. The data for each note boils down to just a few variables.
+
 
