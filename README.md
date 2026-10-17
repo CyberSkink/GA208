@@ -72,4 +72,8 @@ Hatsune Miku:
 
 The beat types are scriptable objects with data that can be interchanged. The data for each note boils down to just a few variables.
 
+## W8
+
+Performance is very interesting, you can also pause time with code. 
+
 
