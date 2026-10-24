@@ -76,4 +76,17 @@ The beat types are scriptable objects with data that can be interchanged. The da
 
 Performance is very interesting, you can also pause time with code. 
 
+## W9
+
+https://github.com/damienzemanek/tacotruckgame 
+
+Logan worked on the following features:
+
+1. made a raycast system that identifies interactable types for the interation mechanic
+2. Made Temporary UI, due to the game being mostly diagetic
+
+We finished pretty much everything we planned to
+
+Damien helped me figure out his side of the code and how to integrate it with mine, he also helped me when I was having some trouble with writing and reading some of the code that was needed.
+
 
