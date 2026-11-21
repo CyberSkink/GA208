@@ -88,5 +88,11 @@ Logan worked on the following features:
 We finished pretty much everything we planned to
 
 Damien helped me figure out his side of the code and how to integrate it with mine, he also helped me when I was having some trouble with writing and reading some of the code that was needed.
+## W10
+
+Scaling well makes it easy to add data to the project, which I feel I said in the metaphor, but I guess not...
+You cannot pick random design patterns and expect the program to scale well
+
+
 
 
