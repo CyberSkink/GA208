@@ -93,6 +93,13 @@ Damien helped me figure out his side of the code and how to integrate it with mi
 Scaling well makes it easy to add data to the project, which I feel I said in the metaphor, but I guess not...
 You cannot pick random design patterns and expect the program to scale well
 
+## W12
+
+Rendering is the process of drawing things on the screen and the rendering pipleline is written on the CPU's side.
+Rendering pipeline is a sequence of steps, allows the rendering to be dictated and processed.
+Shader libraries can be determined through rendering pipeline in Untiy.
+The most important thing is compatibility with render pipeline
+I didn't know what a rendering pipeline was exactly, but I did know how to search for assets that are compatible with the pipeline I was using... How Ironic!
 
 
 
