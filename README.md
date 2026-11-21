@@ -101,5 +101,8 @@ Shader libraries can be determined through rendering pipeline in Untiy.
 The most important thing is compatibility with render pipeline
 I didn't know what a rendering pipeline was exactly, but I did know how to search for assets that are compatible with the pipeline I was using... How Ironic!
 
+I worked on: The critiques damien gave me on my code, The Cookbook UI system, and the plan moving forward. 
+
+The plan is to work on (in addition to the things already on the list): a sentitivity slider and more greyboxing / placeholder assets if time allows, along with any UI tweaks and additions needed.
 
 
